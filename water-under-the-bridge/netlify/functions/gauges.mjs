@@ -1,0 +1,2 @@
+import {json,get,base} from './shared.mjs';
+export const handler=async()=>{try{const d=await get(base+'/stations.json?includeTimeseries=true&includeCurrentMeasurement=true');const names=new Set(['KAUB','KOBLENZ','KÖLN','MAINZ','WÜRZBURG','REGENSBURG','REGENSBURG-SCHWABELWEIS','PASSAU','PASSAU DONAU']);return json(d.filter(s=>names.has(s.shortname)||names.has(s.longname)),200,900)}catch{return json({error:'Gauge source unavailable'},502)}};
