@@ -1,5 +1,6 @@
 [build]
-  publish = "public"
-  functions = "netlify/functions"
+  publish = "water-under-the-bridge/public"
+  functions = "water-under-the-bridge/netlify/functions"
+
 [build.environment]
   NODE_VERSION = "22"
