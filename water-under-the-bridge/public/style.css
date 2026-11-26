@@ -2,3 +2,60 @@
 
 /* Dashboard V2.2 */
 [hidden]{display:none!important}body{background:#edf3f6}header{position:sticky;top:0;z-index:20;box-shadow:0 4px 18px #102f4318;padding-block:14px}nav{gap:7px}nav a{padding:9px 12px;border-radius:7px;white-space:nowrap}nav a[aria-current=page]{background:#ffffff20;color:white;font-weight:750}main{max-width:1550px;padding-top:24px}h1{font-size:clamp(28px,3vw,42px)}.intro p{margin-bottom:0}.metrics{gap:14px}.metric{position:relative;padding:18px 20px;border-top:3px solid #cbdce4}.metric:nth-child(1){border-top-color:#86243d}.metric:nth-child(2){border-top-color:#e07822}.metric:nth-child(3){border-top-color:#b68a00}.metric:nth-child(4){border-top-color:#176a86}.metric strong{font-size:36px;margin:5px 0}.dashboard-summary{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:16px;margin-bottom:16px}.summary-card,.dashboard-link{background:white;border:1px solid var(--line);border-radius:12px;padding:18px 20px;min-width:0}.summary-card h2{font-size:21px}.summary-card p{margin-bottom:8px}.summary-card .entry{padding:8px 0}.coverage-track{height:9px;border-radius:10px;display:flex;overflow:hidden;background:#dce6eb;margin:12px 0}.coverage-track i{display:block;height:100%}.summary-count{font-size:13px;color:var(--muted)}.summary-card button{font-size:13px}.dashboard-links{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:0 0 20px}.dashboard-link{display:flex;flex-direction:column;gap:6px;text-decoration:none;transition:transform .15s,border-color .15s}.dashboard-link:hover{transform:translateY(-2px);border-color:var(--blue)}.dashboard-link strong{font-size:17px;color:var(--ink)}.dashboard-link small{color:var(--muted)}.dashboard-link .jump{margin-top:auto;font-size:13px;font-weight:700}.networkgrid{grid-template-columns:minmax(0,1fr) minmax(260px,340px)}#detail{max-height:680px;overflow:auto;overflow-wrap:anywhere}#map{min-width:760px}.viewgroup{display:contents}#extra-intelligence{background:white;border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:16px}.extra-rows{max-height:540px;overflow:auto}.viewgroup .card{min-width:0}#planner form{display:grid;grid-template-columns:repeat(4,minmax(0,1fr)) auto}#planner form input,#planner form select{width:100%}#banner{font-size:12px;overflow-wrap:anywhere}footer{border-top:1px solid var(--line)}@media(max-width:1100px){header{position:static;flex-wrap:wrap}#planner form{grid-template-columns:repeat(2,minmax(0,1fr))}.dashboard-links{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:900px){.dashboard-summary,.networkgrid{grid-template-columns:1fr}#detail{max-height:420px}nav{width:100%;flex-wrap:nowrap;overflow:auto}.summary-card{padding:15px}}@media(max-width:480px){.dashboard-links{grid-template-columns:1fr}.metric strong{font-size:28px}.metric{padding:12px}#planner form{grid-template-columns:1fr}#extra-intelligence{padding:15px}}
+
+/* V2.6 — editorial travel theme. Independent identity, inspired by luxury travel
+   presentation; these are original design tokens, not official APT brand assets.
+   Navigation severity colors remain controlled by the operational data layer. */
+:root{
+  --travel-navy:#202d42;
+  --travel-ivory:#f7f5f0;
+  --travel-paper:#fff;
+  --travel-sand:#eee8dd;
+  --travel-brass:#8a6b39;
+  --travel-teal:#275b62;
+  --travel-border:#dedbd4;
+  --travel-heading:Georgia,"Times New Roman",serif;
+  --travel-body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --ink:var(--travel-navy);--muted:#59636a;--line:var(--travel-border);--blue:var(--travel-teal);--bg:var(--travel-ivory);--white:var(--travel-paper)
+}
+body{background:var(--travel-ivory);font-family:var(--travel-body);font-size:15px;line-height:1.65}
+header{background:var(--travel-paper);color:var(--ink);border-bottom:1px solid var(--travel-border);box-shadow:none;padding-block:22px;gap:24px}
+.brand strong{font-family:var(--travel-heading);font-size:25px;font-weight:500;letter-spacing:-.55px;line-height:1.2;display:block}
+.brand small{color:var(--muted);font-size:11px;letter-spacing:.65px;margin-top:3px}
+.logo{background:transparent;color:var(--travel-brass);border:1px solid var(--travel-brass);border-radius:50%;width:46px;height:46px;display:grid;place-items:center;padding:0;font:34px/1 var(--travel-heading)}
+nav a{color:var(--ink);border-radius:0;padding:8px 10px;border-bottom:2px solid transparent;font-size:13px}
+nav a:hover,nav a[aria-current=page]{background:transparent;color:var(--travel-teal);border-bottom-color:var(--travel-teal);font-weight:650}
+main{max-width:1440px;padding:34px 36px}
+.intro{padding:28px 30px;background:var(--travel-navy);color:white;position:relative;isolation:isolate;overflow:hidden;border:0;min-height:174px}
+.intro:after{content:"";position:absolute;inset:-60px -40px -60px 55%;z-index:-1;opacity:.2;background:repeating-radial-gradient(ellipse at 100% 45%,transparent 0 16px,#d8c39a 17px 18px,transparent 19px 34px);pointer-events:none}
+.intro .eyebrow{color:#dfcba7}.intro p{color:#e1e5e8;max-width:670px}
+h1,h2,.summary-card h2,.dashboard-link strong{font-family:var(--travel-heading);font-weight:400;letter-spacing:-.45px}
+h1{font-size:clamp(32px,3.6vw,52px);line-height:1.12;margin:8px 0 10px}
+h2{font-size:29px;line-height:1.25}.summary-card h2{font-size:25px}
+h3{font-size:16px;font-weight:650;line-height:1.4}
+.eyebrow{color:#70572d;letter-spacing:1.85px;font-size:10px}
+.intro .tools{min-width:160px}.intro .tools button{background:transparent;border-color:#b7c0c9;color:white}.intro .tools button:hover{background:#ffffff18}
+#banner{background:var(--travel-sand);border-left:3px solid var(--travel-brass);color:var(--ink);border-radius:0;margin:17px 0 24px;padding:12px 16px}
+.card,.metric,.summary-card,.dashboard-link,#extra-intelligence{border-radius:3px;box-shadow:none;border-color:var(--travel-border)}
+.card,#extra-intelligence{padding:28px;margin-bottom:22px}.metrics,.dashboard-summary,.dashboard-links{gap:18px;margin-bottom:22px}
+.metric{padding:19px 22px;border-top-width:3px}.metric strong{font-family:var(--travel-heading);font-size:42px;font-weight:400;font-variant-numeric:lining-nums tabular-nums}
+.metric small{font-size:12px}.summary-card,.dashboard-link{padding:22px 24px}
+.dashboard-link strong{font-size:22px;line-height:1.25}.dashboard-link .jump{color:var(--travel-teal)}
+.dashboard-link:hover{transform:none;background:#fcfaf6}
+button,select,input[type=date],input[type=number]{border-radius:2px;border-color:#bdbfb9;padding:9px 13px}
+button.primary,.periods button.active{background:var(--travel-navy);color:white;border-color:var(--travel-navy)}
+button:hover,button:focus-visible{background:#f0ede5;border-color:var(--travel-teal)}
+a{color:var(--travel-teal);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--travel-teal);outline-offset:3px}
+.networkgrid{gap:20px}.mapscroll{background:#f9f8f4;border-color:var(--travel-border);border-radius:2px}
+#map text{fill:var(--travel-navy)}#map .riverlabel{fill:#65747a}
+aside{background:#faf8f3;border-color:var(--travel-border);border-radius:2px;padding:22px}
+#tooltip{background:var(--travel-navy);border-radius:2px}
+.notice{background:#f4f0e7;border-radius:2px;border-left:2px solid var(--travel-brass)}
+.pill{background:#efede7;border-radius:3px}
+table{border-collapse:collapse;font-variant-numeric:tabular-nums}th{text-align:left;font-size:12px;color:var(--muted);background:#f3f0e9;letter-spacing:.25px}td,th{padding:12px 11px;border-bottom:1px solid var(--travel-border);vertical-align:top}td small{display:block;color:var(--muted);font-size:11px}
+footer{background:var(--travel-navy);color:#d6dce1;padding:28px}
+@media(max-width:1100px){header{padding:16px 24px;gap:12px}main{padding:24px}}
+@media(max-width:900px){header{padding:14px 16px}.intro{padding:24px 22px;min-height:0}.intro:after{inset:0 0 0 40%}main{padding:18px 14px}.card,#extra-intelligence{padding:20px}.networkgrid{gap:12px}aside{padding:18px}nav a{padding:7px 10px}}
+@media(max-width:480px){.brand strong{font-size:21px}.logo{width:40px;height:40px}.intro{padding:22px 18px}.intro .tools{min-width:0;width:100%}.metric{padding:14px}.metric strong{font-size:32px}.summary-card,.dashboard-link{padding:18px}.metrics,.dashboard-summary,.dashboard-links{gap:12px}.card,#extra-intelligence{padding:15px}h2{font-size:24px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.dashboard-link{transition:none}}
